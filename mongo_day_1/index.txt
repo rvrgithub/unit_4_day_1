@@ -1,0 +1,168 @@
+> use database_day_1
+> show createCollection("data")
+> show collections
+data
+
+
+> db.data.insert({"name":"radhika","last_name":"verma","age":20,"email":"radhika123455@.com","ip_add":1212})
+WriteResult({ "nInserted" : 1 })
+
+> db.data.insertMany([{"name":"radhika","last_name":"verma","age":20,"email":"radhika123455@.com","ip_add":1212},{"name":"soniya","last_name":"verma","age":10,"email":"soniya1231233.com","ip_add":212}])
+{
+        "acknowledged" : true,
+        "insertedIds" : [
+                ObjectId("622a109fe31606929be1d7a7"),
+                ObjectId("622a109fe31606929be1d7a8")
+        ]
+}
+>
+
+> db.data.findOne({})
+{
+        "_id" : ObjectId("62277e4db35a71e0a02b4ca0"),
+        "name" : "radhika",
+        "last" : "verma",
+        "age" : 30,
+        "email" : "radhika1234@.com",
+        "gernder" : "F",
+        "ip_add" : 11
+}
+
+> db.data.update({"name":"radhika"},{"name":"Himani"})
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+
+> db.data.updateMany({},{$set:{"country":"india"}})
+{ "acknowledged" : true, "matchedCount" : 13, "modifiedCount" : 13 }
+
+> db.data.remove({"name":"radhika"})
+WriteResult({ "nRemoved" : 2 })
+
+> db.data.deleteOne({"name":"soniya"})
+{ "acknowledged" : true, "deletedCount" : 1 }
+>
+> db.dropDatabase()
+{ "ok" : 1 }
+>
+
+
+
+
+
+> db.data.find({}).pretty()
+
+{
+        "_id" : ObjectId("622a109fe31606929be1d7a7"),
+        "name" : "radhika",
+        "last_name" : "verma",
+        "age" : 20,
+        "email" : "radhika123455@.com",
+        "ip_add" : 1212
+}
+{
+        "_id" : ObjectId("622a109fe31606929be1d7a8"),
+        "name" : "soniya",
+        "last_name" : "verma",
+        "age" : 10,
+        "email" : "soniya1231233.com",
+        "ip_add" : 212
+}
+{
+        "_id" : ObjectId("62277e4db35a71e0a02b4ca0"),
+        "name" : "radhika",
+        "last" : "verma",
+        "age" : 30,
+        "email" : "radhika1234@.com",
+        "gernder" : "F",
+        "ip_add" : 11
+}
+{
+        "_id" : ObjectId("622782b1b35a71e0a02b4ca1"),
+        "name" : "soniya",
+        "last" : "verma",
+        "age" : 20,
+        "email" : "soniya1234@.com",
+        "gender" : "F",
+        "ip_add" : 22
+}
+{
+        "_id" : ObjectId("6227833fb35a71e0a02b4ca2"),
+        "name" : "anuj",
+        "last" : "verma",
+        "age" : 40,
+        "email" : "anuj1234@.com",
+        "gernder" : "M",
+        "ip_add" : 33
+}
+{
+        "_id" : ObjectId("6227841eb35a71e0a02b4ca3"),
+        "name" : "preeti",
+        "last" : "verma",
+        "age" : 25,
+        "email" : "preeti1234@.com",
+        "gender" : "F",
+        "ip_add" : 44
+}
+{
+        "_id" : ObjectId("6227862fb35a71e0a02b4ca4"),
+        "name" : "musky",
+        "last" : "verma",
+        "age" : 10,
+        "email" : "musky1234@.com",
+        "gender" : "F",
+        "ip_add" : 55
+}
+{
+        "_id" : ObjectId("62278682b35a71e0a02b4ca5"),
+        "name" : "divya",
+        "last" : "verma",
+        "age" : 15,
+        "email" : "divi1234@.com",
+        "gender" : "F",
+        "ip_add" : 66
+}
+{
+        "_id" : ObjectId("6227885ab35a71e0a02b4ca6"),
+        "name" : "harry",
+        "last" : "verma",
+        "age" : 19,
+        "email" : "harry1234@.com",
+        "gender" : "M",
+        "ip_add" : 77
+}
+{
+        "_id" : ObjectId("622788edb35a71e0a02b4ca7"),
+        "name" : "raghav",
+        "last" : "verma",
+        "age" : 15,
+        "email" : "raghav1234@.com",
+        "gender" : "M",
+        "ip_add" : 88
+}
+{
+        "_id" : ObjectId("62278990b35a71e0a02b4ca8"),
+        "name" : "hanu",
+        "last" : "verma",
+        "age" : 10,
+        "email" : "hanu12324@.com",
+        "gender" : "M",
+        "ip_add" : 99
+}
+{
+        "_id" : ObjectId("62278aceb35a71e0a02b4ca9"),
+        "name" : "uvraj",
+        "last" : "verma",
+        "age" : 7,
+        "email" : "uvi1234@.com",
+        "gender" : "M",
+        "ip-add" : 100
+}
+{
+        "_id" : ObjectId("622a0ec5e31606929be1d7a6"),
+        "name" : "radhika",
+        "last_name" : "verma",
+        "age" : 20,
+        "email" : "radhika123455@.com",
+        "ip_add" : 1212
+}
+>
+
