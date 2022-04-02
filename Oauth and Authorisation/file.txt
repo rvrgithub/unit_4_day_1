@@ -1,0 +1,29 @@
+1-Authentication
+ a. sign up - register
+ b. sign in - login
+
+
+a.sign up/register
+   I.Email
+   II.Pasword
+//check if the email is already register, if yes, throw error;
+
+b.Login/sign in 
+  I. Email - check  if the email exist/registerd, then
+  II.Password --check pasword is right or wrong 
+
+  2- Register or login 
+  we want to store pass in plain text we'll hash it library  bcrypt
+  email and Password, can we just store this
+  {
+      email: abc@123
+      Password:12345 // plane text 
+  }
+
+3. Token - server will send the token -- library jwt
+token - verifies -> we let the user in 
+
+
+
+install...
+npm install passport-google-oauth2
